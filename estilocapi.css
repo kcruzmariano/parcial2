@@ -1,0 +1,242 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./imagenes/fondocoti.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+#titu {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+p {
+    color: red;
+    margin-top: 5px;
+}
+
+#calif {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer     ;
+    width: 25%;
+}
+
+#calif:hover {
+    background-color: #0056b3;
+}
+
+#resu {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#rehacer {
+    background-color: #DC3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 25%;
+}
+
+#rehacer:hover {
+    background-color: #b0252d;
+}
+.buttons{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+
+}
+#respuestas{
+    background-color: chartreuse;
+    border: none;
+    padding: 10px 20px  ;
+    width: 25%;
+}
+
+.cues{
+    margin-top: 7%;
+    color: rgb(246, 255, 0);
+    background-color: #001219;
+    width: 25%;
+}
+label{
+    background-color: #001219;
+    font-size: 1.5rem;
+    color: rgb(246, 255, 0);
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*, /*Resetear el css, quitar margi por defaul*/
+*::before,
+*::after{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 3em;
+    
+}
+
+:root /*Colores predeterminados*/
+{
+    --ceniza: #84a98c;
+    --turq: #06d6a0;
+    --green-light: #7acbcd;
+    --black: #001219;
+
+    --orange: #eb5e28;
+    --black-grey: #252422;
+    --grey: #403d39; 
+    --grey-white: #ccc5b9;
+    --white-grey: #fffcf2;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background-color:#0056b3;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;/*Posicionar el menu delante de cualquier otro elemento*/
+    border-bottom: .3rem solid var(--black-grey);
+
+}
+
+
+.icon{
+    display: flex;/*Alinea todos los elementos*/
+    align-items: center;
+    justify-content: center;/*Mover elementos al centro*/
+    gap: 2.2rem;/*Espacio (separación) de elementos*/
+}
+
+.logo{/*icono de sitio*/
+    margin-left: 1.2rem;
+    width: 3rem;
+}
+
+.name-web{/*Nombre de la Pagina*/
+    color: var(--black-grey);
+    font-weight: 700;
+    text-decoration: none; /*quitar subrayado de los enlaces $$$$$*/
+}
+
+.menu{
+    width: 2rem;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.header .navigation ul li{ /*Afecta las listas*/
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a{/*afecta los enlaces*/
+    font-size: 16px;
+    color: var(--grey-white);
+    text-decoration: none; /*quitar subrayado de los enlaces*/
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+    background-color: var(--black-grey);
+}
+
+.header .navigation ul li ul{/*afecta las listas de las listas*/
+    position: absolute;
+    right: 0%;
+    width: 300px;
+    background-color: var(--grey);
+    display: none;/*las listas de las listas no tendran un display*/
+}
+
+.header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+/*P%#$%#$%#$%#$%#$%#$%#$%#$%#$%#$%$#%#$%#$%$%$%#%#%%$#*/
+/*Acomoda las listas de las listas de manera vertical, en formal ordenada*/
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li{
+    width: 100%;
+}
+
+.header .navigation ul li:hover > ul{
+    display: initial; /*##Con este display las listas de las opciones aparecen##*/
+}
+
+/*MENU*/
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 45px;
+    height: 35px;
+}
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estiloco.css">
+</head>
+<body>
+    <header class="header">
+        
+        <div class="icon">
+            <h1 class="name-web">TEST</h1>
+        </div>
+    
+        <input type="checkbox" id="toggle">
+        <label for="toggle"> <img class="menu" src="imgs/menu.png" alt="menu"> </label>
+    
+        <nav class="navigation">
+            <ul class="">
+                <li><a href="./Index.Html">Inicio</a></li>
+                <li><a href="./test.html">Test</a></li> 
+                <li> 
+                    <a href="./capitales.html">Cuestionario capitales</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="titulo" style="background-color: rgb(0, 0, 0); display: flex; align-items: center; margin-top: 80px;">
+        <h1 class="titu">MODERNIZACION DE CASA</h1>
+
+    </div>
+    <div class="targetas"><!--bloque de tarjetas-->
+        <!-- tarjeta de camaras -->
+        <div class="tarjeta">
+            <div class="contenido">
+                <h3>CAMARAS</h3>
+                <div>
+                <input type="radio" name="grupo1" value="1500" id="valor1" >
+                <label for="valor1">interior-$1500</label>
+                </div>
+                <div>
+                    <input type="radio" name="grupo1" value="1500" id="valor2" >
+                    <label for="valor2">exterior-$1500</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="grupo1" value="2500" id="valor3" >
+                        <label for="valor3">ambas-$2500</label>
+                        </div>
+            </div>
+        </div>
+
+        <div class="tarjeta"><!--tarjeta de sensores-->
+            <div class="contenido">
+                <h3>SENSORES</h3>
+                 <div>
+                 <input type="checkbox" name="grupo2" id="valor4" value="300">
+                 <label for="valor4">movimiento-$300</label>
+                 </div>
+                 <div>
+                    <input type="checkbox" name="grupo2" id="valor5" value="200">
+                    <label for="valor5">puerta-$200</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="grupo2" id="valor6" value="300">
+                        <label for="valor6">humo-$300</label>
+                        </div>
+                    
+            </div>
+        </div>
+
+        <div class="tarjeta"><!--tajeta de alarmas -->
+            <div class="contenido">
+                <h3>ALARMAS</h3>
+                 <div>
+                 <input type="radio" name="grupo3" id="valor7" value="1000">
+                 <label for="valor7">policia.$1000</label>
+                 </div>
+                 <div>
+                    <input type="radio" name="grupo3" id="valor8" value="1500">
+                    <label for="valor8">auto-$1500</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="grupo3" id="valor9" value="2000">
+                        <label for="valor9">ambas-$2000</label>
+                        </div>
+                    
+            </div>
+        </div>
+        <div class="tarjeta"><!--tajeta de control de acceso -->
+            <div class="contenido">
+                <h3>CONTROL DE ACCESO</h3>
+                 <div>
+                 <input type="checkbox" name="grupo4" id="valor10" value="2500">
+                 <label for="valor10">cerradura-$2500 </label>
+                 </div>
+                 <div>
+                    <input type="checkbox" name="grupo4" id="valor11" value="2000">
+                    <label for="valor11">teclado-$2000</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="grupo4" id="valor12" value="5000">
+                        <label for="valor12">cochera-$5000</label>
+                        </div>
+                    
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="targetas"><!--segundo bloque de tarejetas -->
+        <!-- tarjeta de control de seervicios-->
+        <div class="tarjeta">
+            <div class="contenido">
+                <h4>CONTROL DE SERVICIOS</h4>
+                <div>
+                <input type="checkbox" name="grupo5" value="600" id="valor13" >
+                <label for="valor13">luces-$600</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="grupo5" value="2500" id="valor14" >
+                    <label for="valor14">calefaccion-$2500</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="grupo5" value="2500" id="valor15" >
+                        <label for="valor15">aparatos-$2500</label>
+                        </div>
+            </div>
+        </div>
+
+        <div class="tarjeta"><!--control movil-->
+            <div class="contenido">
+                <label for="grupo6"><h3>APP</h3></label>
+                <select name="sleccion" id="grupo6" >
+                    <option value="" disabled selected>seleccione una opcion</option>
+                    <option value="150">movil-$150</option>
+                    <option value="200">pc-$200</option>
+                    <option value="250">ambas-$250 </option>
+                </select>
+                    
+            </div>
+        </div>
+
+        <div class="tarjeta"><!--tajeta dE ENERGIA -->
+            <div class="contenido">
+                <h3>ENERGIA DE RESPALDO</h3>
+                 <div>
+                 <input type="checkbox" name="grupo7" id="valor19" value="5000">
+                 <label for="valor19">generador-$5000 </label>
+                 </div>
+                 <div>
+                    <input type="checkbox" name="grupo7" id="valor20" value="2500">
+                    <label for="valor20">bateria-$2500</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="grupo7" id="valor21" value="8000">
+                        <label for="valor21">paneles-$8000</label>
+                        </div>
+                    
+            </div>
+        </div>
+        <div class="tarjeta"><!--tajeta de servicios -->
+            <div class="contenido">
+                <h3>SERVICIOS</h3>
+                 <div>
+                 <input type="checkbox" name="grupo8" id="valor22" value="500">
+                 <label for="valor22">instalacion-$500</label>
+                 </div>
+                 <div>
+                    <input type="checkbox" name="grupo8" id="valor23" value="250">
+                    <label for="valor23">mantenimiento-$250</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="grupo8" id="valor24" value="500">
+                        <label for="valor24">seguro-500</label>
+                        </div>
+                    
+            </div>
+        </div>
+        
+    </div>
+    <div class="botones">
+        <button id="coti">cotizar</button>
+        <button id="reiniciar">cancelar</button>
+    </div>
+
+    <div class="content-fact">
+        <div class="cuenta">
+            <p id="subtotal"></p>
+            <p id="total"></p>
+        </div>
+    </div>
+    
+    <script src="scrip.js"></script>
+</body>
+</html>

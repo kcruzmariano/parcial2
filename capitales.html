@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilocapi.css">
+</head>
+
+<body >
+  <header class="header">
+        
+    <div class="icon">
+        <h1 class="name-web">TEST</h1>
+    </div>
+
+    <input type="checkbox" id="toggle">
+    <label for="toggle"> <img class="menu" src="imgs/menu.png" alt="menu"> </label>
+
+    <nav class="navigation">
+        <ul class="">
+            <li><a href="./Index.Html">Inicio</a></li>
+            <li><a href="./cotizador.html">Cotizador</a></li> 
+            <li> 
+                <a href="./test.html">Test</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <h1 class="cues">cuestionario</h1>
+    <br><br>
+    <div>
+        <section id="pr1">
+
+                <label for="respuestas1">Bruselas es la capital del pais denominado 
+            <select name="sleccion" id="respuestas1" >
+                <option value="" disabled selected>selecciones una opcion</option>
+                <option value="0">Guatemala</option>
+                <option value="1">Belgica</option>
+                <option value="0">Buenos aires </option>
+            </select>
+            <p id="em1"></p>
+        </section>
+        <section id="pr1">
+            
+                <label for="respuestas1">Bruselas es la capital del pais denominado  </label>
+            <select name="sleccion" id="respuestas2" >
+                <option value="" disabled selected>seleccione una opcion</option>
+                <option value="0">Guatemala</option>
+                <option value="0">Belgica</option>
+                <option value="1">Buenos aires </option>
+            </select>
+            <p id="em2"></p>
+        </section>
+        <section id="pr1">
+                <label for="respuestas3">San Jose es la capital de</label>
+            <select name="sleccion" id="respuestas3" >
+                <option value="" disabled selected></option>
+                <option value="0">Brasil</option>
+                <option value="0">Argentina</option>
+                <option value="1"> costa rica</option>
+                <option value="0">Venezuela</option>
+            </select>
+            <p id="em3"></p> 
+        </section>
+        <section id="pr1" > 
+                <label for="respuestas4">La capital de Venezuela es </label>
+            <select name="sleccion" id="respuestas4" >
+                <option value="" disabled selected></option>
+                <option value="0">Tegucigalpa</option>
+                <option value="0">Managua</option>
+                <option value="0">Panama </option>
+                <option value="1">Caracas</option>
+            </select>
+            <p id="em4"></p> 
+        </section>
+        <section id="pr1">
+                <label for="respuestas5">Brasilia, es la capital del país </label>
+            <select name="sleccion" id="respuestas5" >
+                <option value="" disabled selected></option>
+                <option value="0">Colombia</option>
+                <option value="0">Ecuador</option>
+                <option value="0">Paraguay </option>
+                <option value="1">Brasil</option>
+            </select>
+            <p id="em5"></p> 
+        </section>
+        <section id="pr1">
+                <label for="respuestas6">La capital de Perú es </label>
+            <select name="sleccion" id="respuestas6" >
+                <option value="" disabled selected></option>
+                <option value="0">Sucre</option>
+                <option value="0">Bogotá</option>
+                <option value="0">Montevideo</option>
+                <option value="1">Lima</option>
+            </select>
+            <p id="em6"></p>
+        </section>
+        <section id="pr1">
+                <label for="respuestas7">Puerto españa es la capital de</label> 
+            <select name="sleccion" id="respuestas7" >
+                <option value="" disabled selected></option>
+                <option value="0">Sucre</option>
+                <option value="0">Bolivia</option>
+                <option value="0">Brasil </option>
+                <option value="1">Trinidad y Tobago</option>
+            </select>
+            <p id="em7"></p>
+        </section>
+        <section id="pr1">
+                <label for="respuestas8">Cuba, país cuya capital es </label>
+            <select name="sleccion" id="respuestas8" >
+                <option value="" disabled selected></option>
+                <option value="0">Kingston</option>
+                <option value="0">Santo Domingo</option>
+                <option value="1">La habana </option>
+                <option value="0">Castries</option>
+            </select>
+            <p id="em8"></p>
+        </section>
+        <section id="pr1">
+                <label for="respuestas9">Managua, es la capital que pertenece a</label> 
+            
+            <select name="sleccion" id="respuestas9" >
+                <option value="" disabled selected></option>
+                <option value="0">Panamá</option>
+                <option value="0">Honduras</option>
+                <option value="1">Nicaragua</option>
+                <option value="0">Belice</option>
+            </select>
+            <p id="em9"></p>
+        </section>
+        <section id="pr1">
+                <label for="respuestas10">Ecuador, tiene como capital </label> 
+            <select name="sleccion" id="respuestas10" >
+                <option value="" disabled selected></option>
+                <option value="0">Parabarimo</option>
+                <option value="0">Montevideo</option>
+                <option value="0">Asunción</option>
+                <option value="1">Quito</option>
+            </select>
+            <p id="em10"></p>
+        </section>  
+    </div>
+    <div class="buttons">
+        <button id="calif">calificar </button> <p id="resu"></p>
+        <button id="respuestas">mostrar respuestas</button>
+      <button id="rehacer">rehacer</button>
+    </div>
+    <script>
+        
+        
+        const calificar=document.getElementById("calif");// variable global
+        const resultado=document.getElementById("resu");
+        calificar.addEventListener('click',()=>{//variable local
+            let array= []
+        const selects = document.querySelectorAll('select') ;
+        var suma=0;
+        const valores = Array.from(selects).map(select => select.options[select.selectedIndex].value);
+        if(valores.length>0 && valores.length==10){
+          for(let i=0; i<valores.length;i++){
+            console.log(valores[i]);
+            suma+=parseInt(valores[i]);
+            }
+
+            resultado.innerText= "tu resultado es:"+suma;
+
+            document.getElementById("rehacer").addEventListener('click',function(){
+          document.querySelectorAll('select').forEach((x) => x.selectedIndex= false);
+                resu.innerText=null;
+                em1.innerText=null;
+                em2.innerText=null;
+                em3.innerText=null;
+                em4.innerText=null;
+                em5.innerText=null;
+                em6.innerText=null;
+                em7.innerText=null;
+                em8.innerText=null;
+                em9.innerText=null;
+                em10.innerText=null;
+        });
+          document.getElementById("respuestas").addEventListener('click',function(){
+            let e1 = document.getElementById('respuestas1').value;
+            let e2 = document.getElementById('respuestas2').value;
+            let e3 = document.getElementById('respuestas3').value;
+            let e4 = document.getElementById('respuestas4').value;
+            let e5 = document.getElementById('respuestas5').value;
+            let e6 = document.getElementById('respuestas6').value;
+            let e7 = document.getElementById('respuestas7').value;
+            let e8 = document.getElementById('respuestas8').value;
+            let e9 = document.getElementById('respuestas9').value;
+            let e10 = document.getElementById('respuestas10').value;
+          
+      if(e1==1){
+        em1.innerText="✔️" + "Question number 1";
+      }else{
+        em1.innerText="❌" + "Question number 1";
+      }
+
+      //emoji2
+
+      if(e2==1){
+        em2.innerText="✔️" + "Question number 2";
+      }else{
+        em2.innerText="❌" + "Question number 2";
+      }
+
+      //em3
+
+      if(e3==1){
+        em3.innerText="✔️" + "Question number 3";
+      }else{
+        em3.innerText="❌" + "Question number 3";
+      }
+
+      //em4
+
+      if(e4==1){
+        em4.innerText="✔️" + "Question number 4";
+      }else{
+        em4.innerText="❌" + "Question number 4";
+      }
+
+      //em5
+
+      if(e5==1){
+        em5.innerText="✔️" + "Question number 5";
+      }else{
+        em5.innerText="❌" + "Question number 5";
+      }
+
+      //em6
+
+      if(e6==1){
+        em6.innerText="✔️" + "Question number 6";
+      }else{
+        em6.innerText="❌" + "Question number 6";
+      }
+
+      //em7
+      if(e7==1){
+        em7.innerText="✔️" + "Question number 7";
+      }else{
+        em7.innerText="❌" + "Question number 7";
+      }
+
+      //em8
+      if(e8==1){
+        em8.innerText="✔️" + "Question number 8";
+      }else{
+        em8.innerText="❌" + "Question number 8";
+      }
+
+      //em9
+      if(e9==1){
+        em9.innerText="✔️" + "Question number 9";
+      }else{
+        em9.innerText="❌" + "Question number 9";
+      }
+
+      //em10
+      if(e10==1){
+        em10.innerText="✔️" + "Question number 10";
+      }else{
+        em10.innerText="❌" + "Question number 10";
+      }
+          })
+
+        }
+        
+
+        })
+       
+    
+
+
+        
+
+
+    </script>
+</body>
+</html>
